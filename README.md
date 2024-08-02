@@ -1,4 +1,3 @@
-
 # Handwritten Text Extraction Using OCR
 
 This project implements an Optical Character Recognition (OCR) pipeline to extract handwritten text from images and PDF documents. The pipeline uses Tesseract OCR with the `pytesseract` library, along with image preprocessing techniques to improve text accuracy. The project is developed in Python and runs in Google Colab.
@@ -17,7 +16,7 @@ This project implements an Optical Character Recognition (OCR) pipeline to extra
 - **Libraries:** Tesseract OCR, `pytesseract`, OpenCV, PIL, Matplotlib, `pdf2image`
 - **Platform:** Google Colab
 
-## Installation
+## Installation and Usage
 
 1. **Install Required Packages:**
 
@@ -27,15 +26,17 @@ This project implements an Optical Character Recognition (OCR) pipeline to extra
    !pip install pytesseract
    !pip install opencv-python-headless
    !pip install pdf2image
+   ```
+
 Set Up Tesseract Path:
 
-Ensure the path for Tesseract OCR is set in your script. For Google Colab, it is typically:
+2. **Ensure the path for Tesseract OCR is set in your script. For Google Colab, it is typically:**
 
 
+```bash
 pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
-Usage
 Upload Files:
-
+```
 Use the file upload dialog in Google Colab to upload images and PDF documents.
 
 Run Preprocessing and OCR:
@@ -46,12 +47,13 @@ For PDFs, each page is converted to an image, preprocessed, and then OCR is appl
 For images, preprocessing is applied directly, followed by OCR.
 View Results:
 
-Processed images and extracted text will be displayed in the Colab notebook.
-Visualization of binary images and the extracted text will be shown.
+Processed images and extracted text will be displayed in the Colab notebook. Visualization of binary images and the extracted text will be shown.
+
 Example
 Here's a snippet of how to use the provided Colab notebook:
 
-
+python
+```
 # Install dependencies
 !apt-get install -y poppler-utils
 !apt-get install -y tesseract-ocr
@@ -64,11 +66,14 @@ uploaded = files.upload()
 
 # Process files
 # Code for processing and OCR extraction here
+```
 Colab Notebook
-Access the interactive Colab notebook here.
+Access the interactive Colab notebook [here](https://colab.research.google.com/drive/10YUJvhUh6Fp5Ndx9BYsaHJL3aViIeM2V#scrollTo=loaeYYVrg4VJ).
+
 
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request to contribute.
 
 License
 This project is licensed under the Apache License 2.0. See the LICENSE file for details.
+
